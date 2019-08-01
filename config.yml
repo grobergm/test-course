@@ -1,0 +1,24 @@
+title: Test Course
+tagline: This is a Test
+description: lorem ipsum dollar sit amet....
+template: 
+  name: test_course
+  repo: test-course-template
+  description: a quick test for github learning lab
+before:
+  - type: createIssue
+    title: First title
+    body: 01.md
+
+steps: 
+  - title: First Step
+    description: this is the first step in the Course
+    event: issue.closed
+    link: {{ repoUrl }}/issues/1
+    actions:
+      - type: respond
+        with: 01_complete.md
+        issue: 1
+      - type: createIssue
+        title: Now do the next thing
+        body: 02.md
