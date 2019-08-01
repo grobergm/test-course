@@ -14,7 +14,7 @@ steps:
   - title: First Step
     description: this is the first step in the Course
     event: issue.closed
-    link: {{ repoUrl }}/issues/1
+    link: "{{ repoUrl }}/issues/1"
     actions:
       - type: respond
         with: 01_complete.md
